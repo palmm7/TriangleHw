@@ -3,6 +3,7 @@ import javafx.application.Application;
 import javafx.geometry.Point2D;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.scene.text.Text;
@@ -10,8 +11,10 @@ import javafx.stage.Stage;
 
 public class Main extends Application {  
   private double radius = 10;
+ 
   private Circle[] circle = {new Circle(40, 40, 10),
     new Circle(140, 40, 10), new Circle(60, 140, 10)};
+  private Circle cir1 = new Circle(100,100,100,Color.YELLOW);
   private Line line1 = new Line();
   private Line line2 = new Line();
   private Line line3 = new Line();  
@@ -21,7 +24,7 @@ public class Main extends Application {
   public void start(Stage primaryStage) {  
     Pane pane = new Pane();    
     setLines();
-    pane.getChildren().addAll(circle[0], circle[1], circle[2],
+    pane.getChildren().addAll(cir1,circle[0], circle[1], circle[2],
       line1, line2, line3, text[0], text[1], text[2]);
     
     // Create a scene and place it in the stage
